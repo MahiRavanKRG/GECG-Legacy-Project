@@ -1,20 +1,40 @@
-.form-container {
-  background: #0f0c29; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.home{
+  display: flex;
+}
 
-  height: 55rem;
+.left-view{
+  width: 50vw;
+  min-height: 100vh;
+  background-color: #24243e;
+  transition: 0.5s ease-in;
+}
+
+.right-view{
+  width: 50vw;
+  min-height: 100vh;
+  background-color: white;
+  transition: 0.5s ease-in;
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+
+.left-view.close{
+  width: 0;
+  opacity: 0;
+}
+
+.right-view.close{
+  width: 100%;
+}
+
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
