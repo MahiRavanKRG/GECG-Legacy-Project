@@ -9,19 +9,22 @@
   max-width: 600px;
   outline: 1px solid black;
   place-items: center;
-  background-color: white;
+  background-color: var(--primary-bg);
   /* z-index: ;
   opacity: 0; */
   opacity: 0;
   transition: 5s ease-in;
   /* position: absolute;
   right: -60%; */
+  position: absolute;
+  right: -50%;
 }
 
 .signup-form.fliped{
     /* right: 10%;
     opacity: 1;
     z-index: 1; */
+    right: 0;
     opacity: 1;
 }
 
