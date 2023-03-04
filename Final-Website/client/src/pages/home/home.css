@@ -1,0 +1,41 @@
+.home {
+  display: flex;
+}
+.home-left {
+  /* Sizing */
+  width: 50%;
+  min-height: 100vh;
+}
+
+.home-left {
+  /* Sizing */
+  width: 50%;
+  min-height: 100vh;
+}
+
+/* Background Gradient */
+/* background: #111928;
+    background: -webkit-linear-gradient(
+      to top,
+      #243b55,
+      #141e30
+    ); 
+    background: linear-gradient(
+      to top,
+      #243b55,
+      #141e30
+    );  */
+
+@media only screen and (max-width: 600px) {
+  .home {
+    flex-direction: column;
+  }
+  .home-left {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .home-right {
+    width: 100%;
+    min-height: 100vh;
+  }
+}

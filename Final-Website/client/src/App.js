@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Home from './pages/home/Home';
+import Main from './pages/main/Main';
 
 function App() {
+  // When user enter correct credentails then "Main" page will be rendered instead of "Home"
+  // So for that we have made state below
+  const [submitCorrectInformation, setsubmitCorrectInformation] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {submitCorrectInformation ? <Main /> : <Home />}
     </div>
   );
 }
