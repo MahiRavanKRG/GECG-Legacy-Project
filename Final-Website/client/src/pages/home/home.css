@@ -1,15 +1,21 @@
+/* Styling of Home page */
 .home {
+  /* Alignment of two parts
+    -> home-left
+    -> home-right
+  */
   display: flex;
 }
 .home-left {
   /* Sizing */
-  width: 50%;
+  width: 45%;
   min-height: 100vh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.home-left {
+.home-right {
   /* Sizing */
-  width: 50%;
+  width: 55%;
   min-height: 100vh;
 }
 
@@ -26,6 +32,41 @@
       #141e30
     );  */
 
+/* Styling Inner Containers of home-left */
+
+.home-left-container {
+  /* It will make some space in x direction */
+  padding: 0 1.5rem;
+}
+
+.home-left-container-title {
+  margin-bottom: 1rem;
+}
+
+.home-left-container-description {
+  margin-bottom: 1rem;
+}
+
+.home-left-container-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-left-container-links span {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.home-left-container-links span svg {
+  height: 25px;
+  width: 25px;
+}
+
+/* Responsive Design */
+
+/* For mobile screen views */
 @media only screen and (max-width: 600px) {
   .home {
     flex-direction: column;
