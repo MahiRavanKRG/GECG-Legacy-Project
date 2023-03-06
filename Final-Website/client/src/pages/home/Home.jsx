@@ -2,7 +2,8 @@ import React from "react";
 import "./home.css";
 import "./form.css";
 
-function Home() {
+function Home({setsubmitCorrectInformation, flip, setFlip}) {
+
   return (
     <>
       {/* This is the main home page container */}
@@ -17,9 +18,11 @@ function Home() {
 
           <div className="home-left-container">
             <div className="home-left-container-title">
+              {/* GLP Heading */}
               <h1>GLP-Community</h1>
             </div>
             <div className="home-left-container-description">
+              {/* GLP Description */}
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
                 veniam dolores eligendi vitae, hic eius dolor eaque excepturi!
@@ -28,6 +31,7 @@ function Home() {
               </p>
             </div>
             <div className="home-left-container-links">
+              {/* GLP Links */}
               <span className="flex-center">
                 {/* Twitter Logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -179,7 +183,7 @@ function Home() {
         <aside className="home-right flex-center">
           <div className="form-container">
             {/* Login Form */}
-            {/* <div className="face login-form flex-center">
+            <div className={`${flip ? "fliped-login-page login-form" : "login-form flex-center"} `}>
               <div className="form-group">
                 <h1>Login</h1>
               </div>
@@ -211,10 +215,13 @@ function Home() {
               <div className="form-group">
                 <button className="login-btn">Submit</button>
               </div>
-            </div> */}
+              <div className="form-group">
+                <p className="form-group-text" onClick={() => {setFlip(true)}}>Don't have account?</p>
+              </div>
+            </div>
 
             {/* Signup Form */}
-            <div className="face signup-form flex-center">
+            <div className={`${flip ? "fliped-signup-form signup-form flex-center" : "signup-form flex-center"} `}>
               <div className="form-group">
                 <h1>Sign Up</h1>
               </div>
@@ -298,6 +305,9 @@ function Home() {
               </div>
               <div className="form-group">
                 <button className="signup-btn">Submit</button>
+              </div>
+              <div className="form-group">
+                <p className="form-group-text" onClick={() => {setFlip(false)}}>Back to Login</p>
               </div>
             </div>
           </div>
