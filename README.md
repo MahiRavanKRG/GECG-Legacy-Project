@@ -9,6 +9,7 @@ Now, If you want to add your contribution to the Legacy-Project then follow the 
     Step 3. Find your department
     Step 4. Remember this path (Copy it somewhere)
     Step 5. Copy the repo to your local device and add a branch by your name
-    Step 6. Make your own folder format -> [200130011xxxx (Enrollment no) name_and_surname]
+    Step 6. Make your own folder format -> [name_and_surname]
     Step 7. Commit your changes, Verify if you have followed the process
     Step 8. Create a pull request and submit your google form
+If you have problem following this ask any of our representatives.
