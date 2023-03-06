@@ -1,6 +1,6 @@
 import React from 'react'
 import About from '../../components/about/About'
-import CardList from '../../components/card/CardList'
+import CardList from '../../components/cardlist/CardList'
 import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
 import './main.css'

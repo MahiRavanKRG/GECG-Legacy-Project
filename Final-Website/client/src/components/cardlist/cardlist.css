@@ -2,13 +2,16 @@
 .cardlist {
   padding: 1.5rem 1.5rem;
   width: calc(100vw - var(--sidebar-width));
+}
+
+.card-grid{
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 /* For each card */
-.card {
+/* .card {
   position: relative;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   height: 25rem;
@@ -60,7 +63,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /* .card-fliped.front{
     position: absolute;
@@ -82,7 +85,4 @@
     transform: perspective(1000px) rotateY(360deg);
 
 } */
-.card-links svg {
-  height: 24px;
-  width: 24px;
-}
+
