@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import './form.css'
+import "./form.css";
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
       {/* This is the main home page container */}
       <main className="home">
         {/* Left side of the Home Page */}
-        <aside className="home-left flex-center">
+        <aside className="home-left">
           {/* There are three types of content 
              1. Title
              2. Description
@@ -178,18 +178,128 @@ function Home() {
         {/* Rigth side of the Home Page */}
         <aside className="home-right flex-center">
           <div className="form-container">
-            <div className="face login-form flex-center">
+            {/* Login Form */}
+            {/* <div className="face login-form flex-center">
               <div className="form-group">
                 <h1>Login</h1>
               </div>
               <div className="form-group">
-                <input type="email" name="email" id="email" />
-                <span id="email-label">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="form-group-input"
+                  placeholder=" "
+                  required
+                />
+                <span id="email-label" className="form-group-span">
+                  Email
+                </span>
+              </div>
+              <div className="form-group">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  className="form-group-input"
+                  placeholder=" "
+                />
+                <span id="password-label" className="form-group-span" required>
+                  Password{" "}
+                </span>
+              </div>
+              <div className="form-group">
+                <button className="login-btn">Submit</button>
+              </div>
+            </div> */}
+
+            {/* Signup Form */}
+            <div className="face signup-form flex-center">
+              <div className="form-group">
+                <h1>Sign Up</h1>
+              </div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder=" "
+                  className="form-group-input"
+                />
+                <span className="form-group-span">Full Name</span>
+              </div>
+
+              <div className="even">
+                <div className="form-group">
+                  <select
+                    name="branch"
+                    id="branch"
+                    className="form-group-select"
+                    defaultValue="Branch"
+                  >
+                    <option value="" disabled selected>
+                      Branch
+                    </option>
+                    <option value="IT">IT</option>
+                    <option value="CE">CE</option>
+                    <option value="EC">IT</option>
+                    <option value="IC">IC</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <select
+                    name="branch"
+                    id="branch"
+                    className="form-group-select"
+                    defaultValue="Branch"
+                  >
+                    <option value="" disabled selected>
+                      Ending Year
+                    </option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="IC">2026</option>
+                  </select>
+                </div>
+              </div>
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="signup-email"
+                  id="signup-email"
+                  placeholder=" "
+                  className="form-group-input"
+                />
+                <span className="form-group-span">Email</span>
+              </div>
+
+              <div className="even">
+                <div className="form-group">
+                  <input
+                    type="password"
+                    name="signup-password"
+                    id="signup-password"
+                    placeholder=" "
+                    className="form-group-input"
+                  />
+                  <span className="form-group-span">Password</span>
+                </div>
+                <div className="form-group">
+                  <input
+                    type="password"
+                    name="signup-confirm-password"
+                    id="signup-confirm-password"
+                    placeholder=" "
+                    className="form-group-input"
+                  />
+                  <span className="form-group-span">Confirm</span>
+                </div>
+              </div>
+              <div className="form-group">
+                <button className="signup-btn">Submit</button>
               </div>
             </div>
-            {/* <div className="face signup-form flex-center">
-              <h3>Back</h3>
-            </div> */}
           </div>
         </aside>
       </main>
