@@ -1,0 +1,46 @@
+:root{
+    --header-height: 10vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height : var(--header-height);
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky; 
+  top: 0;
+  background: #092f71;
+  background: -webkit-linear-gradient(
+    to right,
+    #052c58,
+    #17397a
+  ); 
+  background: linear-gradient(
+    to right,
+    #070E2F,
+    #0E1B53
+  ); 
+  z-index: 1;
+}
+
+.header-logo h1{
+    font-family: var(--heading-text);
+    color: whitesmoke;
+}
+
+/* All the icons in header */
+.header-links{
+    display: flex;
+    justify-content: flex-start;
+    /* display: flex; */
+    gap: 2rem;
+}
+
+/* All the svg icons in header */
+.header-links span svg{
+    height: 24px;
+    width: 24px;
+    fill: #fff;
+}

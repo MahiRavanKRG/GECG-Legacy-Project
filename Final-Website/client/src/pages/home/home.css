@@ -5,6 +5,7 @@
     -> home-right
   */
   display: flex;
+  transition: 3s ease-in;
 }
 .home-left {
   /* Sizing */

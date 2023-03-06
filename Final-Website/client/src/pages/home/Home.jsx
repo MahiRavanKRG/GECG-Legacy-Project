@@ -3,7 +3,15 @@ import "./home.css";
 import "./form.css";
 
 function Home({setsubmitCorrectInformation, flip, setFlip}) {
-
+  function validateLoginDetails(){
+    const loginEmailValue = document.getElementById("email").value;
+    const loginPasswordValue = document.getElementById("password").value;
+    console.log(loginPasswordValue)
+    const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(validEmailRegex.test(loginEmailValue) && loginPasswordValue === "admin"){
+      setsubmitCorrectInformation(true);
+    }
+  }
   return (
     <>
       {/* This is the main home page container */}
@@ -209,11 +217,11 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                   placeholder=" "
                 />
                 <span id="password-label" className="form-group-span" required>
-                  Password{" "}
+                  Password
                 </span>
               </div>
               <div className="form-group">
-                <button className="login-btn">Submit</button>
+                <button className="login-btn" onClick={validateLoginDetails}>Submit</button>
               </div>
               <div className="form-group">
                 <p className="form-group-text" onClick={() => {setFlip(true)}}>Don't have account?</p>
@@ -242,14 +250,13 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                     name="branch"
                     id="branch"
                     className="form-group-select"
-                    defaultValue="Branch"
                   >
-                    <option value="" disabled selected>
+                    <option disabled>
                       Branch
                     </option>
                     <option value="IT">IT</option>
                     <option value="CE">CE</option>
-                    <option value="EC">IT</option>
+                    <option value="EC">EC</option>
                     <option value="IC">IC</option>
                   </select>
                 </div>
@@ -258,9 +265,8 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                     name="branch"
                     id="branch"
                     className="form-group-select"
-                    defaultValue="Branch"
                   >
-                    <option value="" disabled selected>
+                    <option value="Ending Year"disabled>
                       Ending Year
                     </option>
                     <option value="2023">2023</option>

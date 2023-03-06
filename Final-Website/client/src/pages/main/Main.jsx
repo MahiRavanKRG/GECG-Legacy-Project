@@ -3,15 +3,15 @@ import About from '../../components/about/About'
 import CardList from '../../components/card/CardList'
 import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
+import './main.css'
 
 function Main() {
   return (
     <>
       <div className="main">
         <Header />
-        <CardList />
-        <About />
         <Sidebar />
+        <CardList />
       </div>
     </>
   )
