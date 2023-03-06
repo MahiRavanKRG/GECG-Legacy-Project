@@ -18,4 +18,20 @@
     #0E1B53
   ); 
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sidebar-heading h1{
+  color: whitesmoke;
+  margin-top: 1rem;
+}
+
+.sidebar-filter-group select{
+  outline: none;
+  border: none;
+  font-family: var(--span-text);
+  padding: .5rem 0.7rem;
 }

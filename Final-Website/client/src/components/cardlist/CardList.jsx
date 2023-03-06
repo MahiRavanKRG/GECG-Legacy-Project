@@ -4,7 +4,6 @@ import "../../assets/images/user-logo.png";
 import Card from "./card/Card";
 
 function CardList() {
-  const [cardFlip, setCardFlip] = useState(false);
   return (
     <>
       <div className="cardlist">
@@ -28,7 +27,7 @@ const cards = [
     domain: "Frontend Developer | Cyber Security",
     branch: "IT",
     batch: "2020-2024",
-    imgUrl: "../../assets/images/user-logo.png",
+    imgUrl: "../../assets/images/user.png",
     aboutUser:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas dolore vel, natus possimus rem similique fuga necessitatibus sint",
     githubLink: "https://github.com/uttamakwana",

@@ -6,7 +6,7 @@
   height: 20rem;
   box-shadow: 0 6px 3px rgba(9, 9, 9, 0.2);
   transform-style: preserve-3d;
-  transition: 200ms ease-in-out;
+  transition: 500ms ease-in;
   transform: rotateY(var(--rotate-y, 0)) perspective(1000px);
 }
 
@@ -99,6 +99,10 @@
   border-radius: 50%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
+}
+
+.card-links span:hover{
+    background-color: whitesmoke;
 }
 
 .card-back-btn button {

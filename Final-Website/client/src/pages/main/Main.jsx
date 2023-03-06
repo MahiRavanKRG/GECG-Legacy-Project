@@ -5,11 +5,11 @@ import Header from '../../components/header/Header'
 import Sidebar from '../../components/sidebar/Sidebar'
 import './main.css'
 
-function Main() {
+function Main({setsubmitCorrectInformation}) {
   return (
     <>
       <div className="main">
-        <Header />
+        <Header setsubmitCorrectInformation={setsubmitCorrectInformation}/>
         <Sidebar />
         <CardList />
       </div>
