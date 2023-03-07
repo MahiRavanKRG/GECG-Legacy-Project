@@ -1,0 +1,128 @@
+/* Styling of Home page */
+.home {
+  /* Alignment of two parts
+    -> home-left
+    -> home-right
+  */
+  display: flex;
+  transition: 3s ease-in;
+}
+.home-left {
+  /* Sizing */
+  width: 50%;
+  min-height: 100vh;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-right: 1px solid darkgrey;
+  background: #092f71;
+  background: -webkit-linear-gradient(
+    to bottom,
+    #052c58,
+    #17397a
+  ); 
+  background: linear-gradient(
+    to bottom,
+    #070E2F,
+    #0E1B53
+  ); 
+}
+
+.home-right {
+  /* Sizing */
+  width: 50%;
+  min-height: 100vh;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Background Gradient */
+
+/* background: #111928;
+    background: -webkit-linear-gradient(
+      to top,
+      #243b55,
+      #141e30
+    ); 
+    background: linear-gradient(
+      to top,
+      #243b55,
+      #141e30
+    );  */
+
+/* Styling Inner Containers of home-left */
+
+.home-left-container {
+  /* It will make some space in x direction */
+  padding: 0 1.5rem;
+  height: 75%;
+  box-shadow: 0 -5px 5px -5px #333, 0 5px 5px -5px #333, -5px 0 5px -5px #333;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #111928;
+    background: -webkit-linear-gradient(
+      to top,
+      #070E2F,
+      #0E1B53
+    ); 
+    background: linear-gradient(
+      to top,
+      #070E2F,
+      #0E1B53
+    ); 
+}
+
+.home-left-container-title {
+  margin-bottom: 1rem;
+  font-family: var(--heading-text);
+  font-size: 2rem;
+  color: rgb(240, 240, 240);
+}
+
+.home-left-container-description {
+  margin-bottom: 1rem;
+  color: rgb(196, 196, 196);
+  width: 90%;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.home-left-container-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-left-container-links span {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.home-left-container-links span svg {
+  height: 25px;
+  width: 25px;
+}
+
+/* Responsive Design */
+
+/* For mobile screen views */
+@media only screen and (max-width: 600px) {
+  .home {
+    flex-direction: column;
+  }
+  .home-left {
+    width: 100%;
+    min-height: 100vh;
+  }
+  .home-right {
+    width: 100%;
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,218 @@
+/* All the css of Login form and Sign up form will be here */
+
+/* Form css */
+.form-container {
+  position: relative;
+  padding: 0 1.5rem;
+  height: 75%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: perspective(1500px);
+  border-radius: 0.3rem;
+  transition: 2s ease-in-out;
+}
+
+.form-container .login-form,
+.form-container .signup-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 2s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.form-container .face.login-form {
+  /* background: white; */
+  /* box-shadow: 0 -5px 5px -5px #333, 0 5px 5px -5px #333, 5px 0 5px -5px #333; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  /* top: 50%; */
+}
+
+/* .form-container:hover .login-form {
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.form-container .face.signup-form {
+  background-color: yellowgreen;
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.form-container:hover .signup-form {
+  transform: perspective(1000px) rotateY(360deg);
+}
+
+.form-container .face h3 {
+  font-size: 3rem;
+  transform: perspective(1000px) translateZ(50px);
+} */
+
+/* When fliped class got activate we want to make flip the login card and want to visible the signup page */
+.fliped-login-page{
+  width: 100%;
+  height: 100%;
+  transition: 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.signup-form{
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.fliped-signup-form{
+  transform: perspective(1000px) rotateY(360deg);
+}
+
+/* For both the form */
+
+.login-form,
+.signup-form {
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+/* This is the gruop of input and span */
+
+.form-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+/* Title of login page */
+
+.form-group h1 {
+  font-family: var(--heading-text);
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+/* span of login page */
+
+.form-group span {
+  position: absolute;
+  top: 45%;
+  left: 19%;
+  transform: translate(-19%, -45%);
+  transition: 0.3s ease-in-out;
+  color: grey;
+  font-family: var(--span-text);
+}
+
+/* input of login page */
+
+.form-group-input {
+  padding: 0.7rem 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: 1px solid darkgrey;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 75%;
+}
+
+/* select of sign page */
+
+.form-group-select {
+  padding: 0.7rem 1rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: 1px solid darkgrey;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 100%;
+  color: grey;
+  font-family: var(--span-text);
+}
+
+/* When we enter in input means focus in input */
+
+.form-group-input:focus {
+  outline: 1px solid blue;
+}
+
+/* When we enter in input means focus in input then our span goes in top direction */
+
+.form-group-input:focus + .form-group-span {
+  top: 0;
+  left: 18%;
+  background-color: white;
+  padding: 0 0.3rem;
+  color: darkblue;
+  font-size: 0.8rem;
+}
+
+/* When we autofill in input means focus in input then our span goes in top direction */
+.form-group-input:autofill + .form-group-span {
+  top: 0;
+  left: 18%;
+  background-color: white;
+  padding: 0 0.3rem;
+  color: darkblue;
+}
+
+/* When we enter some text and goes out of it then span will stay there */
+
+.form-group-input:not(:placeholder-shown) + .form-group-span {
+  top: 0;
+  left: 18%;
+  background-color: white;
+  padding: 0 0.3rem;
+  color: darkblue;
+}
+
+/* Button of login page */
+
+.login-btn {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 0.24rem;
+  font-family: var(--heading-text);
+  font-weight: 700;
+}
+
+/* Text (Don't have an account?) in login page */
+
+.form-group-text{
+  font-size: .9rem;
+  color: rgb(95, 95, 95);
+  font-family: var(--span-text);
+  cursor: pointer;
+}
+
+/* Making row of two input */
+
+.even{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.even .form-group input{
+  width: 100%;
+}
+
+/* Button of singup page */
+
+.signup-btn {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 0.24rem;
+  font-family: var(--heading-text);
+  font-weight: 700;
+}

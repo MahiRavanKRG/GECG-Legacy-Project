@@ -1,0 +1,79 @@
+.login-form {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 2fr;
+  padding: 2rem 3rem;
+  height: 60%;
+  width: 70%;
+  max-width: 600px;
+  outline: 1px solid black;
+}
+
+.login-form-title {
+  font-size: 2rem;
+  color: var(--primary-text);
+  font-weight: 800;
+  /* margin-bottom: 1.5rem; */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.form-group button {
+  all: unset;
+  padding: 1rem 2rem;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.3);
+  outline: rgba(0, 0, 0, 0.1);
+  color: var(--primary-text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form-group label {
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  width: 92%;
+  transition: 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  color: white;
+}
+
+.form-group input:focus {
+  background-color: transparent;
+  outline: 1px solid white;
+  color: white;
+}
+.form-group select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  width: 15rem;
+}
+
+#account{
+  all: unset;
+  margin: 1rem 0;
+  color: var(--secondary-text);
+}
+.form-group textarea {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  width: 15rem;
+}
+
+

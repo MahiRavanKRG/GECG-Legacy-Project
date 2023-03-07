@@ -1,0 +1,39 @@
+.home {
+  display: flex;
+}
+
+.left-view {
+  width: 50vw;
+  min-height: 100vh;
+  background-color: #24243e;
+  transition: 1s ease-in;
+}
+
+.right-view {
+  width: 50vw;
+  min-height: 100vh;
+  background-color: darkblue;
+  transition: 1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-view.close {
+  width: 0;
+  opacity: 0;
+}
+
+.right-view.close {
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-bg);
+  transition: 5s ease-in;
+}

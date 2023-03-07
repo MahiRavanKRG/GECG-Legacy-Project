@@ -1,0 +1,37 @@
+:root{
+--sidebar-width: 14vw;
+}
+.sidebar {
+  height: calc(100vh - var(--header-height));
+  position: fixed;
+  right: 0;
+  width: var(--sidebar-width);
+  background: #092f71;
+  background: -webkit-linear-gradient(
+    to top,
+    #052c58,
+    #17397a
+  ); 
+  background: linear-gradient(
+    to top,
+    #070E2F,
+    #0E1B53
+  ); 
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sidebar-heading h1{
+  color: whitesmoke;
+  margin-top: 1rem;
+}
+
+.sidebar-filter-group select{
+  outline: none;
+  border: none;
+  font-family: var(--span-text);
+  padding: .5rem 0.7rem;
+}

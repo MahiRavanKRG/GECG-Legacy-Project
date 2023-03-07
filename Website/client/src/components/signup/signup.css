@@ -1,0 +1,99 @@
+.signup-form {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  height: 60%;
+  width: 70%;
+  /* height: 60%; */
+  width: 70%;
+  max-width: 600px;
+  outline: 1px solid black;
+  place-items: center;
+  background-color: var(--primary-bg);
+  /* z-index: ;
+  opacity: 0; */
+  opacity: 0;
+  transition: 5s ease-in;
+  /* position: absolute;
+  right: -60%; */
+  position: absolute;
+  right: -50%;
+}
+
+.signup-form.fliped{
+    /* right: 10%;
+    opacity: 1;
+    z-index: 1; */
+    right: 0;
+    opacity: 1;
+}
+
+.signup-form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 .5rem;
+}
+
+.signup-form-title {
+  margin-bottom: 1.3rem;
+  font-size: 2rem;
+  color: var(--primary-text);
+  font-weight: 800;
+}
+
+.even{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+#passing-year{
+    width: 100%;
+}
+#branch{
+    width: 100%;
+}
+
+.signup-form-group button {
+  all: unset;
+  padding: 1rem 2rem;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.3);
+  outline: rgba(0, 0, 0, 0.1);
+  color: var(--primary-text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.signup-form-group label {
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+.signup-form-group input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  transition: 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  color: white;
+}
+
+.signup-form-group input:focus {
+  background-color: transparent;
+  outline: 1px solid white;
+  color: white;
+}
+.signup-form-group select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  width: 15rem;
+}
+
+textarea{
+    width: 100%;
+}
