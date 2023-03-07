@@ -2,13 +2,54 @@ import React from "react";
 import "./home.css";
 import "./form.css";
 
-function Home({setsubmitCorrectInformation, flip, setFlip}) {
-  function validateLoginDetails(){
+function Home({ setsubmitCorrectInformation, flip, setFlip }) {
+  // This function will handle the values of signup form that user will submit
+  function handleSubmit() {
+    // Making state of all the fields in sign up form
+    let fullName = document.getElementById("name").value;
+    let email = document.getElementById("signup-email").value;
+    let branch = document.getElementById("branch").value;
+    let batch = document.getElementById("batch").value;
+    let password = document.getElementById("signup-password").value;
+    let confirmPassword = document.getElementById(
+      "signup-confirm-password"
+    ).value;
+    let about = document.getElementById("about").value
+    alert("Hello World");
+    fetch("http://localhost:5000/createUser", {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify({
+        fullName,
+        email,
+        branch,
+        batch,
+        password,
+        about,
+        confirmPassword,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data, "userRegistered");
+      });
+      setsubmitCorrectInformation(true);
+  }
+  function validateLoginDetails() {
     const loginEmailValue = document.getElementById("email").value;
     const loginPasswordValue = document.getElementById("password").value;
-    console.log(loginPasswordValue)
-    const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(validEmailRegex.test(loginEmailValue) && loginPasswordValue === "admin"){
+    console.log(loginPasswordValue);
+    const validEmailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (
+      validEmailRegex.test(loginEmailValue) &&
+      loginPasswordValue === "admin"
+    ) {
       setsubmitCorrectInformation(true);
     }
   }
@@ -191,7 +232,11 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
         <aside className="home-right flex-center">
           <div className="form-container">
             {/* Login Form */}
-            <div className={`${flip ? "fliped-login-page login-form" : "login-form flex-center"} `}>
+            <div
+              className={`${
+                flip ? "fliped-login-page login-form" : "login-form flex-center"
+              } `}
+            >
               <div className="form-group">
                 <h1>Login</h1>
               </div>
@@ -221,15 +266,30 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                 </span>
               </div>
               <div className="form-group">
-                <button className="login-btn" onClick={validateLoginDetails}>Submit</button>
+                <button className="login-btn" onClick={validateLoginDetails}>
+                  Submit
+                </button>
               </div>
               <div className="form-group">
-                <p className="form-group-text" onClick={() => {setFlip(true)}}>Don't have account?</p>
+                <p
+                  className="form-group-text"
+                  onClick={() => {
+                    setFlip(true);
+                  }}
+                >
+                  Don't have account?
+                </p>
               </div>
             </div>
 
             {/* Signup Form */}
-            <div className={`${flip ? "fliped-signup-form signup-form flex-center" : "signup-form flex-center"} `}>
+            <div
+              className={`${
+                flip
+                  ? "fliped-signup-form signup-form flex-center"
+                  : "signup-form flex-center"
+              } `}
+            >
               <div className="form-group">
                 <h1>Sign Up</h1>
               </div>
@@ -251,9 +311,7 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                     id="branch"
                     className="form-group-select"
                   >
-                    <option disabled>
-                      Branch
-                    </option>
+                    <option disabled>Branch</option>
                     <option value="IT">IT</option>
                     <option value="CE">CE</option>
                     <option value="EC">EC</option>
@@ -261,12 +319,8 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                   </select>
                 </div>
                 <div className="form-group">
-                  <select
-                    name="branch"
-                    id="branch"
-                    className="form-group-select"
-                  >
-                    <option value="Ending Year"disabled>
+                  <select name="batch" id="batch" className="form-group-select">
+                    <option value="Ending Year" disabled>
                       Ending Year
                     </option>
                     <option value="2023">2023</option>
@@ -309,11 +363,23 @@ function Home({setsubmitCorrectInformation, flip, setFlip}) {
                   <span className="form-group-span">Confirm</span>
                 </div>
               </div>
-              <div className="form-group">
-                <button className="signup-btn">Submit</button>
+              <div className="from-group">
+                <textarea name="about" id="about" cols="30" rows="5"></textarea>
               </div>
               <div className="form-group">
-                <p className="form-group-text" onClick={() => {setFlip(false)}}>Back to Login</p>
+                <button className="signup-btn" onClick={handleSubmit}>
+                  Submit
+                </button>
+              </div>
+              <div className="form-group">
+                <p
+                  className="form-group-text"
+                  onClick={() => {
+                    setFlip(false);
+                  }}
+                >
+                  Back to Login
+                </p>
               </div>
             </div>
           </div>

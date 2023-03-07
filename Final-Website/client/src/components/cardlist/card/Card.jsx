@@ -15,7 +15,7 @@ function Card({ card }) {
           </div>
           <div className="card-description">
             <div className="card-username">
-              <h3>{card.name}</h3>
+              <h3>{card.fullName}</h3>
             </div>
             <div className="card-useremail">
               <span>Email : </span><a href={`mailto: ${card.email}`}>{card.email}</a>
@@ -33,7 +33,7 @@ function Card({ card }) {
         {/* Back side of the Card  */}
         <div className="card-back">
           <div className="card-username">
-            <h3>{card.name}</h3>
+            <h3>{card.fullName}</h3>
           </div>
           <div className="card-domain">
             <h4>{card.domain}</h4>
@@ -41,8 +41,8 @@ function Card({ card }) {
           <div className="card-batch">
             <p>{card.batch}</p>
           </div>
-          <div className="card-about">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia corrupti fugiat?
+          <div className="card-about" id="about">
+            {card.about}
           </div>
           <div className="card-links">
             <span>
