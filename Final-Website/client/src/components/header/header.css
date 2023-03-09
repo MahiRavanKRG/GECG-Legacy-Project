@@ -43,13 +43,15 @@
   opacity: 0;
   margin-right: 0.5rem;
   transition: 300ms ease-in;
-  padding: 0.3rem .7rem;
+  padding: 0.3rem 0.7rem;
   outline: none;
   border: none;
-  border-radius: .24rem;
+  border-radius: 0.24rem;
 }
 
 .searchbar.clicked-on-search {
   width: 100%;
   opacity: 1;
 }
+
+/* Toggle navigation */

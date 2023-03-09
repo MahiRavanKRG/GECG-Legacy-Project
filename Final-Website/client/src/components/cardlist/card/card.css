@@ -41,6 +41,11 @@
   width: 100%;
 }
 
+.card-logo img{
+  height: 100%;
+  width: 30%;
+}
+
 /* Description of the Front Side */
 
 .card-description {

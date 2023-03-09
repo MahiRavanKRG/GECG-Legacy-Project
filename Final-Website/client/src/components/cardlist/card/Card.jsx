@@ -10,7 +10,7 @@ function Card({ card }) {
         {/* Front Side of the Card */}
         <div className="card-front">
           <div className="card-logo flex-center">
-            <img src={card.imgUrl} alt="Photo" className="flex-center" />
+            <img src="https://cdn-icons-png.flaticon.com/512/17/17004.png" alt="Photo" className="flex-center" />
             {/* <img src={card.imgUrl} alt="User Logo" /> */}
           </div>
           <div className="card-description">

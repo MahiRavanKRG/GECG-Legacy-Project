@@ -14,8 +14,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
     let confirmPassword = document.getElementById(
       "signup-confirm-password"
     ).value;
-    let about = document.getElementById("about").value
-    alert("Hello World");
+    let about = document.getElementById("about").value;
+    // Here we are fetching all the users that are already created in our database and showing them in the Card component
     fetch("http://localhost:5000/createUser", {
       method: "POST",
       crossDomain: true,
@@ -38,12 +38,15 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
       .then((data) => {
         console.log(data, "userRegistered");
       });
-      setsubmitCorrectInformation(true);
+    setsubmitCorrectInformation(true);
   }
+
+  // To validate the login details in login form we have made this function
   function validateLoginDetails() {
     const loginEmailValue = document.getElementById("email").value;
     const loginPasswordValue = document.getElementById("password").value;
     console.log(loginPasswordValue);
+    // Made a regex to check the correct format of email
     const validEmailRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (
@@ -64,14 +67,13 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
              2. Description
              3. Links
           */}
-
           <div className="home-left-container">
+            {/* GLP Heading */}
             <div className="home-left-container-title">
-              {/* GLP Heading */}
               <h1>GLP-Community</h1>
             </div>
+            {/* GLP Description */}
             <div className="home-left-container-description">
-              {/* GLP Description */}
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
                 veniam dolores eligendi vitae, hic eius dolor eaque excepturi!
@@ -79,8 +81,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 expedita. Pariatur, facere?
               </p>
             </div>
+            {/* GLP Links */}
             <div className="home-left-container-links">
-              {/* GLP Links */}
               <span className="flex-center">
                 {/* Twitter Logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -230,6 +232,11 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
         </aside>
         {/* Rigth side of the Home Page */}
         <aside className="home-right flex-center">
+          {/* 
+            There are two forms in the right side
+            1. Login form
+            2. Sign up form
+        */}
           <div className="form-container">
             {/* Login Form */}
             <div
@@ -237,9 +244,12 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 flip ? "fliped-login-page login-form" : "login-form flex-center"
               } `}
             >
-              <div className="form-group">
+              {/* Title of login form */}
+              <div className="form-group jc">
                 <h1>Login</h1>
               </div>
+              {/* There are four form groups in which we are taking the values of email and password */}
+              {/* Login Email - Input */}
               <div className="form-group">
                 <input
                   type="email"
@@ -253,6 +263,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   Email
                 </span>
               </div>
+              {/* Login Password */}
               <div className="form-group">
                 <input
                   type="password"
@@ -265,12 +276,14 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   Password
                 </span>
               </div>
-              <div className="form-group">
+              {/* Login Submit Button */}
+              <div className="form-group jc">
                 <button className="login-btn" onClick={validateLoginDetails}>
                   Submit
                 </button>
               </div>
-              <div className="form-group">
+              {/* Don't have account text to go into sign up formo */}
+              <div className="form-group jc">
                 <p
                   className="form-group-text"
                   onClick={() => {
@@ -290,9 +303,11 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   : "signup-form flex-center"
               } `}
             >
-              <div className="form-group">
+              {/* Sing up form title */}
+              <div className="form-group jc">
                 <h1>Sign Up</h1>
               </div>
+              {/* Full name input */}
               <div className="form-group">
                 <input
                   type="text"
@@ -301,11 +316,13 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   placeholder=" "
                   className="form-group-input"
                 />
-                <span className="form-group-span">Full Name</span>
+                <span className="form-group-span sl">Full Name</span>
               </div>
 
+              {/* Row of Branch and Batch */}
               <div className="even">
-                <div className="form-group">
+                {/* Branch select */}
+                <div className="form-group no-padding">
                   <select
                     name="branch"
                     id="branch"
@@ -318,7 +335,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                     <option value="IC">IC</option>
                   </select>
                 </div>
-                <div className="form-group">
+                {/* Batch select */}
+                <div className="form-group no-padding">
                   <select name="batch" id="batch" className="form-group-select">
                     <option value="Ending Year" disabled>
                       Ending Year
@@ -330,6 +348,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   </select>
                 </div>
               </div>
+              {/* Sing up email */}
               <div className="form-group">
                 <input
                   type="email"
@@ -338,11 +357,13 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   placeholder=" "
                   className="form-group-input"
                 />
-                <span className="form-group-span">Email</span>
+                <span className="form-group-span sl">Email</span>
               </div>
 
+              {/* Password and confirm password */}
               <div className="even">
-                <div className="form-group">
+                {/* Make a password for sing up form */}
+                <div className="form-group no-padding">
                   <input
                     type="password"
                     name="signup-password"
@@ -352,7 +373,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   />
                   <span className="form-group-span">Password</span>
                 </div>
-                <div className="form-group">
+                {/* Confirm password for sing up form */}
+                <div className="form-group no-padding">
                   <input
                     type="password"
                     name="signup-confirm-password"
@@ -363,15 +385,24 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   <span className="form-group-span">Confirm</span>
                 </div>
               </div>
-              <div className="from-group">
-                <textarea name="about" id="about" cols="30" rows="5"></textarea>
-              </div>
+              {/* Text area to write about yourself */}
               <div className="form-group">
+                <textarea
+                  name="about"
+                  id="about"
+                  cols="30"
+                  rows="5"
+                  placeholder="Write something about you"
+                ></textarea>
+              </div>
+              {/* Submit button to submit the sign up details */}
+              <div className="form-group jc">
                 <button className="signup-btn" onClick={handleSubmit}>
                   Submit
                 </button>
               </div>
-              <div className="form-group">
+              {/* Back to login text to go back to login form */}
+              <div className="form-group jc">
                 <p
                   className="form-group-text"
                   onClick={() => {

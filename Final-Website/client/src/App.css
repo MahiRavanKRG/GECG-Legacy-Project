@@ -1,0 +1,6 @@
+/* Font Responsive */
+@media only screen and (width <= 1500px) {
+  html {
+    font-size: 10px;
+  }
+}

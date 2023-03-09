@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from "react";
 import "./cardlist.css";
-import "../../assets/images/user-logo.png";
 import Card from "./card/Card";
-import axios from "axios";
 
-function CardList() {
-  const [cards, setCards] = useState([]);
-
-  // Here we are getting data from userAPI that Aashutosh have created in API.js and User.js
-  useEffect(() => {
-    axios.get("http://localhost:5000/getAllUser").then((res) => {
-      setCards(res.data.data);
-    });
-  }, []);
+function CardList({cards, setCards}) {
+  
   return (
     <>
       <div className="cardlist">
         <div className="card-grid">
           {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
+            return <Card card={card} key={card._id} />;
           })}
         </div>
       </div>

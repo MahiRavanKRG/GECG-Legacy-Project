@@ -13,7 +13,7 @@
   transform-style: preserve-3d;
   transform: perspective(1500px);
   border-radius: 0.3rem;
-  transition: 2s ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .form-container .login-form,
@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: 2s ease-in-out;
+  transition: 200ms ease-in-out;
   backface-visibility: hidden;
 }
 
@@ -55,21 +55,21 @@
 } */
 
 /* When fliped class got activate we want to make flip the login card and want to visible the signup page */
-.fliped-login-page{
+.fliped-login-page {
   width: 100%;
   height: 100%;
-  transition: 2s ease-in-out;
+  transition: 200ms ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: perspective(1000px) rotateY(180deg);
 }
 
-.signup-form{
+.signup-form {
   transform: perspective(1000px) rotateY(180deg);
 }
 
-.fliped-signup-form{
+.fliped-signup-form {
   transform: perspective(1000px) rotateY(360deg);
 }
 
@@ -80,7 +80,6 @@
   flex-direction: column;
   gap: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
 }
 
 /* This is the gruop of input and span */
@@ -107,7 +106,7 @@
 .form-group span {
   position: absolute;
   top: 45%;
-  left: 19%;
+  left: 18%;
   transform: translate(-19%, -45%);
   transition: 0.3s ease-in-out;
   color: grey;
@@ -186,8 +185,8 @@
 
 /* Text (Don't have an account?) in login page */
 
-.form-group-text{
-  font-size: .9rem;
+.form-group-text {
+  font-size: 0.9rem;
   color: rgb(95, 95, 95);
   font-family: var(--span-text);
   cursor: pointer;
@@ -195,7 +194,7 @@
 
 /* Making row of two input */
 
-.even{
+.even {
   width: 80%;
   display: flex;
   align-items: center;
@@ -203,8 +202,15 @@
   padding: 0 1rem;
 }
 
-.even .form-group input{
+.even .form-group input {
   width: 100%;
+}
+
+/* Textare area in sign up form */
+textarea {
+  width: 75%;
+  padding: 1rem;
+  font-family: var(--span-text);
 }
 
 /* Button of singup page */
@@ -215,4 +221,59 @@
   border-radius: 0.24rem;
   font-family: var(--heading-text);
   font-weight: 700;
+}
+
+/* For smaller devices */
+
+@media only screen and (max-width: 800px) {
+  .form-container {
+    height: 500px;
+    width: 77vw;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+
+  .form-group {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .form-group-input {
+    width: 100%;
+  }
+
+  .even {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .jc {
+    justify-content: center;
+  }
+
+  .form-group span{
+    left: 8%;
+  }
+
+  /* When we enter in input means focus in input then our span goes in top direction */
+
+.form-group-input:focus + .form-group-span {
+  left: 6%;
+}
+
+/* When we autofill in input means focus in input then our span goes in top direction */
+.form-group-input:autofill + .form-group-span {
+  left: 6%;
+} 
+
+/* When we enter some text and goes out of it then span will stay there */
+
+.form-group-input:not(:placeholder-shown) + .form-group-span {
+  left: 6%;
+}
 }
