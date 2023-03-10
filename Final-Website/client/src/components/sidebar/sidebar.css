@@ -1,37 +1,107 @@
 :root{
---sidebar-width: 14vw;
+  --sidebar-width: 14vw;
 }
 .sidebar {
   height: calc(100vh - var(--header-height));
   position: fixed;
   right: 0;
   width: var(--sidebar-width);
-  background: #092f71;
+  background: var(--primary-bg);
   background: -webkit-linear-gradient(
     to top,
-    #052c58,
-    #17397a
-  ); 
+    var(--primary-bg),
+    var(--secondary-bg)
+  );
   background: linear-gradient(
-    to top,
-    #070E2F,
-    #0E1B53
-  ); 
+    to bottom,
+    var(--primary-bg),
+    var(--secondary-bg)
+  );
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  transition: 300ms ease;
 }
 
-.sidebar-heading h1{
+.sidebar.active-toggle{
+  right: -20%;
+}
+
+.sidebar-heading h1 {
   color: whitesmoke;
   margin-top: 1rem;
 }
 
-.sidebar-filter-group select{
+.sidebar-filter-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.sidebar-filter-group span {
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
+  font-family: var(--primary-text);
+}
+
+.sidebar-filter-group select {
   outline: none;
   border: none;
-  font-family: var(--span-text);
-  padding: .5rem 0.7rem;
+  font-family: var(--secondary-text);
+  padding: 0.5rem 0.7rem;
+}
+
+.sidebar-filter-group button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.5rem 0.6rem;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: black;
+  font-weight: 800;
+}
+
+.profile-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+/* Profile css */
+.profile-heading h1 {
+  color: whitesmoke;
+  margin-top: 1rem;
+}
+
+.profile-button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.5rem 0.6rem;
+  background-color: whitesmoke;
+  border: none;
+  outline: none;
+  box-shadow: 0 6px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: black;
+  font-weight: 800;
+}
+
+.sidebar-filter-group .profileIsActive {
+  cursor: none;
+  text-decoration: line-through;
+  pointer-events: none;
+  color: var(--primary-bg);
 }

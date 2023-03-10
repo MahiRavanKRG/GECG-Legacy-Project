@@ -2,12 +2,15 @@
 .card {
   position: relative;
   padding: 0.5rem 1rem;
-  width: 25rem;
-  height: 20rem;
+  /* width: 25rem;
+  height: 20rem; */
   box-shadow: 0 6px 3px rgba(9, 9, 9, 0.2);
   transform-style: preserve-3d;
   transition: 500ms ease-in;
   transform: rotateY(var(--rotate-y, 0)) perspective(1000px);
+  width: 340px;
+  height: 325px;
+  max-width: 500px;
 }
 
 .card.card-fliped {
@@ -31,6 +34,7 @@
 
 .card-back {
   transform: rotateY(180deg);
+  background-color: var(--primary-bg);
 }
 
 /* In the Front Card side */
@@ -41,7 +45,7 @@
   width: 100%;
 }
 
-.card-logo img{
+.card-logo img {
   height: 100%;
   width: 30%;
 }
@@ -70,11 +74,51 @@
 }
 
 .card-username {
-  font-family: var(--span-text);
+  font-family: var(--secondary-text);
+  color: var(--primary-bg);
 }
 
 .card-useremail {
-  font-family: var(--span-text);
+  font-family: var(--secondary-text);
+}
+
+.card-useremail a {
+  color: var(--secondary-bg);
+}
+
+.card-back-username {
+  font-family: var(--secondary-text);
+  color: var(--lightest-bg);
+}
+
+.card-back-domain {
+  font-family: var(--secondary-text);
+  color: wheat;
+}
+
+.card-back-batch {
+  color: var(--light-bg);
+}
+.card-back-about {
+  color: var(--lightest-bg);
+}
+
+.card-back-links{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card-back-links span{
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.card-back-links svg{
+  height: 24px;
+  width: 24px;
 }
 
 .card-btn button {
@@ -82,7 +126,7 @@
   padding: 0.6rem;
   border-radius: 0.3rem;
   outline: none;
-  background-color: #092f71;
+  background-color: var(--primary-bg);
   cursor: pointer;
   color: white;
 }
@@ -106,8 +150,8 @@
   cursor: pointer;
 }
 
-.card-links span:hover{
-    background-color: whitesmoke;
+.card-links span:hover {
+  background-color: whitesmoke;
 }
 
 .card-back-btn button {

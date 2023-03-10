@@ -75,16 +75,19 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
             {/* GLP Description */}
             <div className="home-left-container-description">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-                veniam dolores eligendi vitae, hic eius dolor eaque excepturi!
-                Et quas neque, dolore unde quod ad sunt, cum soluta eius nobis
-                expedita. Pariatur, facere?
+                Here you can find open source projects and friends to help you.{" "}
+                <br />
+                GLP 🎯 stands for GECG Legacy Project This is our Legacy. <br />{" "}
+                A project “For the students, By the students”, We understand how
+                It is hard to learn on your own. So,don’t learn on your own.
+                Join us and network with us, alone we are soldiers,
+                Together we are an army.
               </p>
             </div>
             {/* GLP Links */}
             <div className="home-left-container-links">
+              {/* Twitter Logo */}
               <span className="flex-center">
-                {/* Twitter Logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                   <path
                     fill="#03A9F4"
@@ -92,8 +95,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   />
                 </svg>
               </span>
+              {/* Instagram Logo */}
               <span className="flex-center">
-                {/* Instagram Logo */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -201,8 +204,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   />
                 </svg>
               </span>
+              {/* Linkdin Logo */}
               <span className="flex-center">
-                {/* Linkdin Logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                   <g fill="#1976D2">
                     <path d="M0 5h3.578v11H0zM13.324 5.129c-.038-.012-.074-.025-.114-.036a2.32 2.32 0 0 0-.145-.028A3.207 3.207 0 0 0 12.423 5c-2.086 0-3.409 1.517-3.845 2.103V5H5v11h3.578v-6s2.704-3.766 3.845-1v7H16V8.577a3.568 3.568 0 0 0-2.676-3.448z" />
@@ -210,8 +213,8 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   </g>
                 </svg>
               </span>
+              {/* Facebook Logo */}
               <span className="flex-center">
-                {/* Facebook Logo */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   data-name="Ebene 1"
@@ -250,7 +253,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
               </div>
               {/* There are four form groups in which we are taking the values of email and password */}
               {/* Login Email - Input */}
-              <div className="form-group">
+              <div className="form-group mobile-form-group">
                 <input
                   type="email"
                   name="email"
@@ -264,7 +267,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 </span>
               </div>
               {/* Login Password */}
-              <div className="form-group">
+              <div className="form-group mobile-form-group">
                 <input
                   type="password"
                   name="password"
@@ -277,9 +280,9 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 </span>
               </div>
               {/* Login Submit Button */}
-              <div className="form-group jc">
+              <div className="form-group jc ">
                 <button className="login-btn" onClick={validateLoginDetails}>
-                  Submit
+                  Login
                 </button>
               </div>
               {/* Don't have account text to go into sign up formo */}
@@ -308,7 +311,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 <h1>Sign Up</h1>
               </div>
               {/* Full name input */}
-              <div className="form-group">
+              <div className="form-group mobile-form-group">
                 <input
                   type="text"
                   name="name"
@@ -322,7 +325,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
               {/* Row of Branch and Batch */}
               <div className="even">
                 {/* Branch select */}
-                <div className="form-group no-padding">
+                <div className="form-group no-padding mobile-form-group">
                   <select
                     name="branch"
                     id="branch"
@@ -336,7 +339,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   </select>
                 </div>
                 {/* Batch select */}
-                <div className="form-group no-padding">
+                <div className="form-group no-padding mobile-form-group" style={{marginLeft: ".5rem"}}>
                   <select name="batch" id="batch" className="form-group-select">
                     <option value="Ending Year" disabled>
                       Ending Year
@@ -349,7 +352,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 </div>
               </div>
               {/* Sing up email */}
-              <div className="form-group">
+              <div className="form-group mobile-form-group">
                 <input
                   type="email"
                   name="signup-email"
@@ -363,7 +366,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
               {/* Password and confirm password */}
               <div className="even">
                 {/* Make a password for sing up form */}
-                <div className="form-group no-padding">
+                <div className="form-group no-padding mobile-form-group">
                   <input
                     type="password"
                     name="signup-password"
@@ -374,7 +377,7 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                   <span className="form-group-span">Password</span>
                 </div>
                 {/* Confirm password for sing up form */}
-                <div className="form-group no-padding">
+                <div className="form-group no-padding mobile-form-group" style={{marginLeft: ".5rem"}}>
                   <input
                     type="password"
                     name="signup-confirm-password"
@@ -386,13 +389,14 @@ function Home({ setsubmitCorrectInformation, flip, setFlip }) {
                 </div>
               </div>
               {/* Text area to write about yourself */}
-              <div className="form-group">
+              <div className="form-group mobile-form-group">
                 <textarea
                   name="about"
                   id="about"
                   cols="30"
                   rows="5"
                   placeholder="Write something about you"
+                  className="form-group-textarea"
                 ></textarea>
               </div>
               {/* Submit button to submit the sign up details */}

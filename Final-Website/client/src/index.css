@@ -16,8 +16,14 @@
 
 /* Root Variables */
 :root {
-  --heading-text: "Poppins", sans-serif;
-  --span-text: "Tilt Neon", sans-serif;
+  --primary-bg: #06283D;
+  --secondary-bg: #256D85;
+  --light-bg: #47B5FF;
+  --lightest-bg: #DFF6FF;
+  --light-text-color: #a6a2a9;
+  --primary-text: "Poppins", sans-serif;
+  --secondary-text: "Tilt Neon", sans-serif;
+  --light-text: 'Roboto', sans-serif;
 }
 
 body {

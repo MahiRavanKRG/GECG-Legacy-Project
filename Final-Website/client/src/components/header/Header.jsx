@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "./header.css";
 
-function Header({ setsubmitCorrectInformation, handleChange }) {
+function Header({
+  setsubmitCorrectInformation,
+  handleChange,
+  profileActive,
+  setProfileActive,
+  activeToggle,
+  setActiveToggle
+}) {
   const [clickedOnSearch, setClickedOnSearch] = useState(false);
+  
   return (
     <>
       <header className="header">
@@ -42,6 +50,9 @@ function Header({ setsubmitCorrectInformation, handleChange }) {
               width="24"
               height="24"
               viewBox="0 0 24 24"
+              onClick={() => {
+                setProfileActive(!profileActive);
+              }}
             >
               <path
                 fill="#fff"
@@ -82,7 +93,7 @@ function Header({ setsubmitCorrectInformation, handleChange }) {
             </svg>
           </span>
           {/* Toggle Bar */}
-          <span className="flex-center toggle" id="mobile-menu">
+          <span className="flex-center toggle" id="mobile-menu" onClick={() => setActiveToggle(!activeToggle)}>
             <svg
               viewBox="0 0 24 24"
               preserveAspectRatio="xMidYMid meet"

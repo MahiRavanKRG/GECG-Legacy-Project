@@ -1,0 +1,5 @@
+.setting-section{
+    height: calc(100vh - var(--header-height));
+    background-color: wheat;
+    padding: 1rem;
+}

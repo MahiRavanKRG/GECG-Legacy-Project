@@ -1,17 +1,21 @@
 import "./cardlist.css";
 import Card from "./card/Card";
+import Profile from "../profile/Profile";
 
-function CardList({cards, setCards}) {
-  
+function CardList({ cards, profileActive, activeToggle }) {
   return (
     <>
-      <div className="cardlist">
-        <div className="card-grid">
-          {cards.map((card) => {
-            return <Card card={card} key={card._id} />;
-          })}
+      {profileActive ? (
+        <Profile cards={cards}/>
+      ) : (
+        <div className={`cardlist ${activeToggle ? "active-cardlist" : ""}`}>
+          <div className="card-grid">
+            {cards.map((card) => {
+              return <Card card={card} key={card._id} />;
+            })}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

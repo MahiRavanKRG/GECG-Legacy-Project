@@ -18,7 +18,7 @@ function Card({ card }) {
               <h3>{card.fullName}</h3>
             </div>
             <div className="card-useremail">
-              <span>Email : </span><a href={`mailto: ${card.email}`}>{card.email}</a>
+              <a href={`mailto: ${card.email}`}>{card.email}</a>
             </div>
             <div className="card-branch"><span>Branch : </span>{card.branch}</div>
             <div className="card-btn">
@@ -32,19 +32,19 @@ function Card({ card }) {
 
         {/* Back side of the Card  */}
         <div className="card-back">
-          <div className="card-username">
+          <div className="card-back-username">
             <h3>{card.fullName}</h3>
           </div>
-          <div className="card-domain">
+          <div className="card-back-domain">
             <h4>{card.domain}</h4>
           </div>
-          <div className="card-batch">
+          <div className="card-back-batch">
             <p>{card.batch}</p>
           </div>
-          <div className="card-about" id="about">
+          <div className="card-back-about" id="about">
             {card.about}
           </div>
-          <div className="card-links">
+          <div className="card-back-links">
             <span>
               {/* Github Logo */}
               <a href={card.githubLink} target="_blank">
