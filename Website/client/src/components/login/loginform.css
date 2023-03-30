@@ -1,3 +1,4 @@
+/* The CSS for the login form. */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -15,6 +16,14 @@
   -webkit-backdrop-filter: blur(5.9px);
 }
 
+.login-form-title {
+  font-size: 2rem;
+  color: var(--primary-text);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+/* The CSS for the signup form. */
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -30,6 +39,7 @@
   -webkit-backdrop-filter: blur(5.9px);
 }
 
+/* A class that is used to style the form group. */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -39,6 +49,7 @@
   gap: 0.5rem;
 }
 
+/* Styling the button of the "form-group" class */
 .form-group button {
   all: unset;
   padding: 1rem 2rem;
@@ -49,27 +60,27 @@
   cursor: pointer;
 }
 
-.login-form-title {
-  font-size: 2rem;
-  color: var(--primary-text);
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-}
 
+/* Styling the label of the "form group" class. */
 .form-group label {
   color: var(--secondary-text);
 }
 
+/* Styling the input element of the "form-group" class. */
 .form-group input {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   width: 15rem;
 }
+
+/* Styling the select of the "form-group" class. */
 .form-group select {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   width: 15rem;
 }
+
+/* Styling the textarea element of the "form-group" class. */
 .form-group textarea {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;

@@ -1,3 +1,7 @@
+/**
+ * I'm trying to use the state of cardPage to determine whether or not to render the Card component.
+ * @returns The App component is being returned.
+ */
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";

@@ -1,10 +1,13 @@
+/* Creating a root element and rendering the App component. */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/* Creating a root element and rendering the App component. */
 const root = ReactDOM.createRoot(document.getElementById('root'));
+/* Rendering the App component. */
 root.render(
   <React.StrictMode>
     <App />

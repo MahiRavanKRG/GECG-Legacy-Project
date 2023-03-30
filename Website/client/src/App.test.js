@@ -1,3 +1,4 @@
+/* This is a test that is checking to see if the text "learn react" is in the document. */
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

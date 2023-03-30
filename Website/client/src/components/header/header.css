@@ -1,17 +1,23 @@
+/* Setting the padding, background color, and position of the header. */
 .header{
     padding: 2rem 0;
     background-color: var(--primary-bg);
     position: relative;
 }
 
+/* Setting the margin-bottom of the header-title class. */
 .header-title{
     margin-bottom: 1rem;
 }
 
+/* Setting the color of the h1 tag to the value of the --primary-text variable. */
 .header-title h1{
     color: var(--primary-text);
 }
 
+/* Setting the position of the header links to absolute, setting the right and bottom to 0, setting the
+margin to .5rem, setting the display to flex, setting the gap to 1rem, and setting the color to the
+value of the --primary-text variable. */
 .header-links{
     position: absolute;
     right: 0;
@@ -22,6 +28,7 @@
     color: var(--primary-text);
 }
 
+/* Removing all the default styling from the button. */
 .header-links button{
     all: unset;
 }
