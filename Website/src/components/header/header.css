@@ -1,34 +1,59 @@
-/* Setting the padding, background color, and position of the header. */
-.header{
-    padding: 2rem 0;
-    background-color: var(--primary-bg);
-    position: relative;
+:root {
+  --header-height: 10vh;
 }
 
-/* Setting the margin-bottom of the header-title class. */
-.header-title{
-    margin-bottom: 1rem;
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  top: 0;
+  background: var(--primary-bg);
+  background: -webkit-linear-gradient(to top, var(--primary-bg), var(--secondary-bg));
+  background: linear-gradient(to top, var(--primary-bg), var(--secondary-bg));
+  z-index: 1;
 }
 
-/* Setting the color of the h1 tag to the value of the --primary-text variable. */
-.header-title h1{
-    color: var(--primary-text);
+.header-logo h1 {
+  font-family: var(--primary-text);
+  color: whitesmoke;
+  cursor: pointer;
+  user-select: none;
 }
 
-/* Setting the position of the header links to absolute, setting the right and bottom to 0, setting the
-margin to .5rem, setting the display to flex, setting the gap to 1rem, and setting the color to the
-value of the --primary-text variable. */
-.header-links{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: .5rem;
-    display: flex;
-    gap: 1rem;
-    color: var(--primary-text);
+/* All the icons in header */
+.header-links {
+  display: flex;
+  justify-content: flex-start;
+  /* display: flex; */
+  gap: 2rem;
 }
 
-/* Removing all the default styling from the button. */
-.header-links button{
-    all: unset;
+/* All the svg icons in header */
+.header-links span svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  cursor: pointer;
 }
+
+.searchbar {
+  width: 0;
+  opacity: 0;
+  margin-right: 0.5rem;
+  transition: 300ms ease-in;
+  padding: 0.3rem 0.7rem;
+  outline: none;
+  border: none;
+  border-radius: 0.24rem;
+}
+
+.searchbar.clicked-on-search {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Toggle navigation */

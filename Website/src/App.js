@@ -1,22 +1,31 @@
-/**
- * I'm trying to use the state of cardPage to determine whether or not to render the Card component.
- * @returns The App component is being returned.
- */
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
 import { useState } from "react";
-import Card from "./pages/card/Card";
-
+import "./App.css";
+import Home from "./pages/home/Home";
+import Main from "./pages/main/Main";
 function App() {
-  const [cardPage, setCardPage] = useState(false);
+  // When user enter correct credentails then "Main" page will be rendered instead of "Home"
+  // So we have made state submitCorrectInformatin
+  // By default it is false as we are redering the "Home" page first
+  const [submitCorrectInformation, setSubmitCorrectInformation] =
+    useState(false);
+  // To make flip the log page card and make visible signup page when user enter on "Don't have an account?"
+  const [flip, setFlip] = useState(false);
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home cardPage={cardPage} setCardPage={setCardPage} />} />
-        </Routes>
-      </BrowserRouter>
+      {/* Here awe are passing the props to change the states that we have made in App.js component */}
+      {submitCorrectInformation ? (
+        <Main
+          setSubmitCorrectInformation={setSubmitCorrectInformation}
+          submitCorrectInformation={submitCorrectInformation}
+        />
+      ) : (
+        <Home
+          submitCorrectInformation={submitCorrectInformation}
+          setSubmitCorrectInformation={setSubmitCorrectInformation}
+          flip={flip}
+          setFlip={setFlip}
+        />
+      )}
     </div>
   );
 }
