@@ -11,64 +11,65 @@ function Home({
   setFlip,
 }) {
   // This function will handle the values of signup form that user will submit
-  function handleSubmit() {
-    // Making state of all the fields in sign up form
-    let fullName = document.getElementById("name").value;
-    let email = document.getElementById("signup-email").value;
-    let branch = document.getElementById("branch").value;
-    let batch = document.getElementById("batch").value;
-    let password = document.getElementById("signup-password").value;
-    let confirmPassword = document.getElementById(
-      "signup-confirm-password"
-    ).value;
-    let about = document.getElementById("about").value;
-    if (
-      fullName === "" ||
-      email === "" ||
-      branch === "" ||
-      batch === "" ||
-      password === "" ||
-      confirmPassword === "" ||
-      about === ""
-    ) {
-      // return toast(`Please enter ${fullName == "" ? "Full Name" : ""} ${branch == "" ? "Branch" : " "} ${batch == "" ? "Batch": ""} ${about == "" ? "About" : ""} !`);
-      return toast("Please enter all details!");
-    }
-    if (
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-        email
-      ) === false
-    ) {
-      return toast("Enter correct email!");
-    }
-    if (password !== confirmPassword) {
-      return toast("Enter the same password");
-    }
-    // Here we are fetching all the users that are already created in our database and showing them in the Card component
-    fetch("http://localhost:5000/createUser", {
-      method: "POST",
-      crossDomain: true,
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-      body: JSON.stringify({
-        fullName,
-        email,
-        branch,
-        batch,
-        password,
-        about,
-        confirmPassword,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegistered");
-      });
-    setSubmitCorrectInformation(!submitCorrectInformation);
-  }
+  // function handleSubmit() {
+  //   // Making state of all the fields in sign up form
+  //   let fullName = document.getElementById("name").value;
+  //   let email = document.getElementById("signup-email").value;
+  //   let branch = document.getElementById("branch").value;
+  //   let batch = document.getElementById("batch").value;
+  //   let password = document.getElementById("signup-password").value;
+  //   let confirmPassword = document.getElementById(
+  //     "signup-confirm-password"
+  //   ).value;
+  //   let about = document.getElementById("about").value;
+  //   if (
+  //     fullName === "" ||
+  //     email === "" ||
+  //     branch === "" ||
+  //     batch === "" ||
+  //     password === "" ||
+  //     confirmPassword === "" ||
+  //     about === ""
+  //   ) {
+  //     // return toast(`Please enter ${fullName == "" ? "Full Name" : ""} ${branch == "" ? "Branch" : " "} ${batch == "" ? "Batch": ""} ${about == "" ? "About" : ""} !`);
+  //     return toast("Please enter all details!");
+  //   }
+  //   if (
+  //     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+  //       email
+  //     ) === false
+  //   ) {
+  //     return toast("Enter correct email!");
+  //   }
+  //   if (password !== confirmPassword) {
+  //     return toast("Enter the same password");
+  //   }
+  //   // Here we are fetching all the users that are already created in our database and showing them in the Card component
+  //   fetch("http://localhost:5000/createUser", {
+  //     method: "POST",
+  //     crossDomain: true,
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //       "Access-Control-Allow-Origin": "*",
+  //     },
+  //     body: JSON.stringify({
+  //       fullName,
+  //       email,
+  //       branch,
+  //       batch,
+  //       password,
+  //       about,
+  //       confirmPassword,
+  //     }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data, "userRegistered");
+  //     });
+  //   setSubmitCorrectInformation(!submitCorrectInformation);
+  // }
+  // 
 
   // To validate the login details in login form we have made this function
   function validateLoginDetails(e) {
@@ -396,6 +397,7 @@ function Home({
             </div>
 
             {/* Signup Form */}
+            {/* */}
             <div
               className={`${
                 flip
