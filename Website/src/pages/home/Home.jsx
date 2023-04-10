@@ -11,65 +11,7 @@ function Home({
   setFlip,
 }) {
   // This function will handle the values of signup form that user will submit
-  // function handleSubmit() {
-  //   // Making state of all the fields in sign up form
-  //   let fullName = document.getElementById("name").value;
-  //   let email = document.getElementById("signup-email").value;
-  //   let branch = document.getElementById("branch").value;
-  //   let batch = document.getElementById("batch").value;
-  //   let password = document.getElementById("signup-password").value;
-  //   let confirmPassword = document.getElementById(
-  //     "signup-confirm-password"
-  //   ).value;
-  //   let about = document.getElementById("about").value;
-  //   if (
-  //     fullName === "" ||
-  //     email === "" ||
-  //     branch === "" ||
-  //     batch === "" ||
-  //     password === "" ||
-  //     confirmPassword === "" ||
-  //     about === ""
-  //   ) {
-  //     // return toast(`Please enter ${fullName == "" ? "Full Name" : ""} ${branch == "" ? "Branch" : " "} ${batch == "" ? "Batch": ""} ${about == "" ? "About" : ""} !`);
-  //     return toast("Please enter all details!");
-  //   }
-  //   if (
-  //     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-  //       email
-  //     ) === false
-  //   ) {
-  //     return toast("Enter correct email!");
-  //   }
-  //   if (password !== confirmPassword) {
-  //     return toast("Enter the same password");
-  //   }
-  //   // Here we are fetching all the users that are already created in our database and showing them in the Card component
-  //   fetch("http://localhost:5000/createUser", {
-  //     method: "POST",
-  //     crossDomain: true,
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //       "Access-Control-Allow-Origin": "*",
-  //     },
-  //     body: JSON.stringify({
-  //       fullName,
-  //       email,
-  //       branch,
-  //       batch,
-  //       password,
-  //       about,
-  //       confirmPassword,
-  //     }),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data, "userRegistered");
-  //     });
-  //   setSubmitCorrectInformation(!submitCorrectInformation);
-  // }
-  // 
+  // The function for sign up button is paste in the docs folder for version 2.0
 
   // To validate the login details in login form we have made this function
   function validateLoginDetails(e) {
@@ -384,7 +326,7 @@ function Home({
                 </button>
               </div>
               {/* Don't have account text to go into sign up formo */}
-              <div className="form-group jc">
+              {/* <div className="form-group jc">
                 <p
                   className="form-group-text"
                   onClick={() => {
@@ -393,147 +335,11 @@ function Home({
                 >
                   Don't have account?
                 </p>
-              </div>
+              </div> */}
             </div>
 
             {/* Signup Form */}
-            {/* */}
-            <div
-              className={`${
-                flip
-                  ? "fliped-signup-form signup-form flex-center"
-                  : "signup-form flex-center"
-              } `}
-            >
-              {/* Sing up form title */}
-              <div className="form-group jc">
-                <h1>Sign Up</h1>
-              </div>
-              {/* Full name input */}
-              <div className="form-group mobile-form-group">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder=" "
-                  className="form-group-input"
-                />
-                <span className="form-group-span sl">Full Name</span>
-              </div>
-
-              {/* Row of Branch and Batch */}
-              <div className="even">
-                {/* Branch select */}
-                <div className="form-group no-padding mobile-form-group">
-                  <select
-                    name="branch"
-                    id="branch"
-                    className="form-group-select"
-                    required
-                  >
-                    <option disabled>Branch</option>
-                    <option value="CE">CE</option>
-                    <option value="IT">IT</option>
-                    <option value="EC">EC</option>
-                    <option value="IC">IC</option>
-                    <option value="BM">BM</option>
-                    <option value="Civil">Civil</option>
-                    <option value="Mechanical">Mechanical</option>
-                    <option value="Robotics">Robotics</option>
-                    <option value="Metallurgy">Metallurgy</option>
-                  </select>
-                </div>
-                {/* Batch select */}
-                <div
-                  className="form-group no-padding mobile-form-group"
-                  style={{ marginLeft: ".5rem" }}
-                >
-                  <select
-                    name="batch"
-                    id="batch"
-                    className="form-group-select"
-                    required
-                  >
-                    <option value="Batch" disabled>
-                      Batch
-                    </option>
-                    <option value="2019-2023">2019-2023</option>
-                    <option value="2020-2024">2020-2024</option>
-                    <option value="2021-2025">2021-2025</option>
-                    <option value="2022-2026">2022-2026</option>
-                    <option value="2023-2027">2023-2027</option>
-                  </select>
-                </div>
-              </div>
-              {/* Sing up email */}
-              <div className="form-group mobile-form-group">
-                <input
-                  type="email"
-                  name="signup-email"
-                  id="signup-email"
-                  placeholder=" "
-                  className="form-group-input"
-                />
-                <span className="form-group-span sl">Email</span>
-              </div>
-
-              {/* Password and confirm password */}
-              <div className="even">
-                {/* Make a password for sing up form */}
-                <div className="form-group no-padding mobile-form-group">
-                  <input
-                    type="password"
-                    name="signup-password"
-                    id="signup-password"
-                    placeholder=" "
-                    className="form-group-input"
-                  />
-                  <span className="form-group-span">Password</span>
-                </div>
-                {/* Confirm password for sing up form */}
-                <div
-                  className="form-group no-padding mobile-form-group"
-                  style={{ marginLeft: ".5rem" }}
-                >
-                  <input
-                    type="password"
-                    name="signup-confirm-password"
-                    id="signup-confirm-password"
-                    placeholder=" "
-                    className="form-group-input"
-                  />
-                  <span className="form-group-span">Confirm</span>
-                </div>
-              </div>
-              {/* Text area to write about yourself */}
-              <div className="form-group mobile-form-group">
-                <textarea
-                  name="about"
-                  id="about"
-                  cols="30"
-                  rows="5"
-                  placeholder="Write something about you"
-                  className="form-group-textarea"
-                ></textarea>
-              </div>
-              {/* Submit button to submit the sign up details */}
-              <div className="form-group jc">
-                <button className="signup-btn" onClick={handleSubmit}>
-                  Submit
-                </button>
-              </div>
-              {/* Back to login text to go back to login form */}
-              <div className="form-group jc">
-                <p
-                  className="form-group-text"
-                  onClick={() => {
-                    setFlip(false);
-                  }}
-                >
-                  Back to Login
-                </p>
-              </div>
-            </div>
+            {/* The code for signup form is deleted and paste in docs folder for version 2.0*/}
           </div>
         </aside>
       </main>
