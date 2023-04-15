@@ -10,13 +10,14 @@ function CardList({
   setProfileActive,
   activeToggle,
   submitCorrectInformation,
+  sidebarClose
 }) {
   return (
     <>
       {profileActive ? (
         <Profile cards={cards} />
       ) : (
-        <div className={`cardlist ${activeToggle ? "active-cardlist" : ""}`}>
+        <div className={`cardlist ${activeToggle ? "active-cardlist blur-cardlist" : ""} ${sidebarClose ? "close-sidebar" : ""}`}>
           <div className="card-grid">
             {cards.map((card) => {
               return <Card card={card} key={card._id} />;

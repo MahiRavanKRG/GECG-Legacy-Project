@@ -17,7 +17,6 @@ function Profile({ cards }) {
             <label htmlFor="changeEmail">Email</label>
             <input type="email" name="changeEmail" id="changeEmail" />
           </div>
-
           <div className="setting-group">
             <label htmlFor="changeBranch">Branch</label>
             <select name="changeBranch" id="changeBranch">

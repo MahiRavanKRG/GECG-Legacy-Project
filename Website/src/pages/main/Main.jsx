@@ -17,7 +17,11 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
   // we have to set differnt api if filter button is clicked in sidebar
   // it means we are filtering data according the our need
   const [filteredData, setFilteredData] = useState(false);
+  // we are taking branch value from the select tag of sidebar
   const [branchValue, setBranchValue] = useState("");
+  // this state is made to make close the sidebar by button
+  const [sidebarClose, setSidebarClose] = useState(false);
+
   function handleChange(e) {
     setSearch(e.target.value);
   }
@@ -321,6 +325,16 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
   return (
     <>
       <div className="main">
+        {/* Header
+        1. submitCorrectInformation 👉 used for signout
+        2. setSubmitCorrectInformation 👉 used for make change state of submitCorrectInformation
+        3. handleChange 👉 we are passing the handlechnage function that will change the cards according to search value of search input tag
+        4. profileActive 👉 used to open profile setting menu
+        5. activeToggle 👉 used to toggle sidebar 
+        6. setActiveToggle 👉 to change state of toggle sidebar
+        7. sidebarClose 👉 when user close sidebar 
+
+        */}
         <Header
           submitCorrectInformation={submitCorrectInformation}
           setSubmitCorrectInformation={setSubmitCorrectInformation}
@@ -330,6 +344,17 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
           setActiveToggle={setActiveToggle}
           activeToggle={activeToggle}
         />
+
+        {/* Sidebar
+        1. setBranchValue 👉 whatever you select in branch select tag it will set that value 
+        2. filteredData 👉 when user submit filters the state will change
+        3. setFilteredData 👉 to change the state of filteredData
+        4. setProfileActive 👉 to exit from profile setting
+        5. activeToggle 👉 to apply css of changing sidebar right positioning
+        6. sidebarClose 👉 to close sidebar
+        7. setSidebarClose 👉 to change state of sidebar
+        8. setActiveToggle 👉   
+        */}
         <Sidebar
           setBranchValue={setBranchValue}
           filteredData={filteredData}
@@ -337,6 +362,9 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
           profileActive={profileActive}
           setProfileActive={setProfileActive}
           activeToggle={activeToggle}
+          sidebarClose={sidebarClose}
+          setSidebarClose={setSidebarClose}
+          setActiveToggle={setActiveToggle}
         />
         <CardList
           submitCorrectInformation={submitCorrectInformation}
@@ -344,6 +372,7 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
           profileActive={profileActive}
           activeToggle={activeToggle}
           setProfileActive={setProfileActive}
+          sidebarClose={sidebarClose}
         />
       </div>
     </>

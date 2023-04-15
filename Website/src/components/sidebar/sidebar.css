@@ -1,6 +1,7 @@
 :root{
-  --sidebar-width: 14vw;
+  --sidebar-width: 25vw;
 }
+
 .sidebar {
   height: calc(100vh - var(--header-height));
   position: fixed;
@@ -23,10 +24,17 @@
   align-items: center;
   gap: 1.5rem;
   transition: 300ms ease;
+  z-index: 14;
+  /* filter: blur(20px); */
+  right: -50%;
 }
 
 .sidebar.active-toggle{
-  right: -20%;
+  right: 0;
+}
+
+.sidebar.close-sidebar{
+  right: -50%;
 }
 
 .sidebar-heading h1 {

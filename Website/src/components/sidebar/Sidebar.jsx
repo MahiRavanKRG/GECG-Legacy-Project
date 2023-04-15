@@ -1,13 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./sidebar.css";
 
-function Sidebar({ profileActive, setProfileActive, activeToggle, filteredData,setFilteredData, setBranchValue }) {
+function Sidebar({ profileActive, setProfileActive, activeToggle, filteredData,setFilteredData, setBranchValue, sidebarClose, setSidebarClose, setActiveToggle }) {
   const branchEl = useRef();
   const batchEl = useRef();  
   const domainEl = useRef();
   return (
     <>
-      <aside className={`sidebar ${activeToggle ? "active-toggle" : ""}`}>
+      <aside className={`sidebar ${activeToggle ? "active-toggle" : ""} ${sidebarClose ? "close-sidebar" : ""}`}>
         {profileActive ? (
           <>
             <div className="profile-heading">
@@ -70,6 +70,9 @@ function Sidebar({ profileActive, setProfileActive, activeToggle, filteredData,s
               }}>
                 {filteredData ? "Clear" : "Submit"}
               </button>
+              <button style={{marginTop: "1rem"}} onClick={() => {
+                setActiveToggle(!activeToggle)
+              }}>Close</button>
             </div>
           </>
         )}

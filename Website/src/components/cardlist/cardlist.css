@@ -1,11 +1,16 @@
 /* Main CardList  */
 .cardlist {
   padding: 1.5rem 1.5rem;
-  width: calc(100vw - var(--sidebar-width));
+  /* width: calc(100vw - var(--sidebar-width)); */
+  width: 100vw;
 }
 
 .cardlist.active-cardlist{
   width: 100vw;
+}
+
+.cardlist.blur-cardlist{
+  filter: blur(5px);
 }
 
 .card-grid{

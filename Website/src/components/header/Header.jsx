@@ -11,7 +11,7 @@ function Header({
   setActiveToggle
 }) {
   const [clickedOnSearch, setClickedOnSearch] = useState(false);
-  
+  console.log(activeToggle)
   return (
     <>
       <header className="header">
