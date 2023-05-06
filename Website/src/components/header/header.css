@@ -1,0 +1,59 @@
+:root {
+  --header-height: 10vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  position: sticky;
+  top: 0;
+  background: var(--primary-bg);
+  background: -webkit-linear-gradient(to top, var(--primary-bg), var(--secondary-bg));
+  background: linear-gradient(to top, var(--primary-bg), var(--secondary-bg));
+  z-index: 1;
+}
+
+.header-logo h1 {
+  font-family: var(--primary-text);
+  color: whitesmoke;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* All the icons in header */
+.header-links {
+  display: flex;
+  justify-content: flex-start;
+  /* display: flex; */
+  gap: 2rem;
+}
+
+/* All the svg icons in header */
+.header-links span svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  cursor: pointer;
+}
+
+.searchbar {
+  width: 0;
+  opacity: 0;
+  margin-right: 0.5rem;
+  transition: 300ms ease-in;
+  padding: 0.3rem 0.7rem;
+  outline: none;
+  border: none;
+  border-radius: 0.24rem;
+}
+
+.searchbar.clicked-on-search {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Toggle navigation */

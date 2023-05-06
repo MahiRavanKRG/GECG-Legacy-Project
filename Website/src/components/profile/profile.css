@@ -1,0 +1,61 @@
+.setting-section{
+    height: calc(100vh - var(--header-height));
+    background-color: whitesmoke;
+    padding: 1rem;
+    width: calc(100vw - var(--sidebar-width));
+}
+
+.setting-heading h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+}
+
+.setting-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.setting-group{
+    width: 48%;
+    /* max-width: 400px; */
+}
+
+.setting-group input, select, textarea  {
+    /* width: 100%; */
+    display: block;
+    width: 100%;
+    padding: .6rem;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    margin-top: .4rem;
+    /* box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); */
+}
+
+@media only screen and (max-width: 500px){
+    .setting-container{
+        gap: 1.5rem;
+    }
+    .setting-group{
+        width: 100%;
+    }
+    .setting-group label{
+        margin-right: .5rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .setting-group input{
+        /* width: 100%; */
+        display: block;
+        width: 100%;
+        padding: .6rem;
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 4px;
+        margin-top: .4rem;
+        /* box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); */
+    }
+}

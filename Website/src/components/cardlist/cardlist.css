@@ -1,0 +1,97 @@
+/* Main CardList  */
+.cardlist {
+  padding: 1.5rem 1.5rem;
+  /* width: calc(100vw - var(--sidebar-width)); */
+  /* width: 100vw; */
+}
+
+.cardlist.active-cardlist{
+  width: 100vw;
+}
+
+.cardlist.blur-cardlist{
+  filter: blur(5px);
+}
+
+.card-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* For each card */
+/* .card {
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 25rem;
+  width: 25rem;
+  backface-visibility: hidden;
+  border-radius: 0.25rem;
+  transform: rotateY(var(--rotate-y, 0)) perspective(1000px);
+  transform-style: preserve-3d;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: 2s ease-in-out;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.card-logo {
+  height: 40%;
+  padding: 1rem;
+}
+
+.card-logo img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-description {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* .card-fliped.front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(180deg);
+
+}
+.card-fliped.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: perspective(1000px) rotateY(360deg);
+
+} */
+

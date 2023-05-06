@@ -1,0 +1,182 @@
+/* Main Card */
+.card {
+  position: relative;
+  padding: 0.5rem 1rem;
+  /* width: 25rem;
+  height: 20rem; */
+  box-shadow: 0 6px 3px rgba(9, 9, 9, 0.2);
+  transform-style: preserve-3d;
+  transition: 500ms ease-in;
+  transform: rotateY(var(--rotate-y, 0)) perspective(1000px);
+  width: 340px;
+  height: 325px;
+  max-width: 500px;
+}
+
+.card.card-fliped {
+  --rotate-y: 180deg;
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: var(--primary-bg);
+}
+
+/* In the Front Card side */
+
+/* user logo in front side */
+.card-logo {
+  height: 30%;
+  width: 100%;
+}
+
+.card-logo img {
+  height: 100%;
+  width: 30%;
+}
+
+/* Description of the Front Side */
+
+.card-description {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card-description span {
+  font-weight: 700;
+}
+
+.card-description a {
+  text-decoration: none;
+  color: grey;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.card-username {
+  font-family: var(--secondary-text);
+  color: var(--primary-bg);
+}
+
+.card-useremail {
+  font-family: var(--secondary-text);
+}
+
+.card-useremail a {
+  color: var(--secondary-bg);
+}
+
+.card-useremail a:hover{
+  text-decoration: underline;
+}
+
+.card-back-username {
+  font-family: var(--secondary-text);
+  color: var(--lightest-bg);
+}
+
+.card-back-domain {
+  font-family: var(--secondary-text);
+  color: wheat;
+}
+
+.card-back-batch {
+  color: var(--light-bg);
+}
+.card-back-about {
+  color: var(--lightest-bg);
+}
+
+.card-back-links{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card-back-links span{
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.card-back-links svg{
+  height: 24px;
+  width: 24px;
+}
+
+.card-btn button {
+  border: none;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  outline: none;
+  background-color: var(--primary-bg);
+  cursor: pointer;
+  color: white;
+}
+
+/* Back side of the card */
+.card-back {
+  gap: 1rem;
+  text-align: justify;
+}
+
+.card-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card-links span {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+.card-links span:hover {
+  background-color: whitesmoke;
+}
+
+.card-back-btn button {
+  border: none;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  outline: none;
+  background-color: #092f71;
+  cursor: pointer;
+  color: white;
+}
+
+/* SVG of github and linkedin */
+.card-links svg {
+  height: 24px;
+  width: 24px;
+}
+
+@media only screen and (max-width: 350px){
+  .card{
+    width: 300px;
+    height: 300px;
+  }
+}
