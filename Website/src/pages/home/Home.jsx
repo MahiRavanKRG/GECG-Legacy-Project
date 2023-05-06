@@ -40,7 +40,7 @@ function Home({
     //   },
     //   body : JSON.stringify({loginEmailValue, loginPasswordValue})
     // }).then((res) => res.json).then((data) => console.log("Data avo!", data))
-    fetch("http://localhost:5000/Userlogin", {
+    fetch("https://glp-backend.vercel.app/Userlogin", {
       method: "POST",
       crossDomain: true,
       headers: {

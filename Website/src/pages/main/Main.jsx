@@ -91,7 +91,7 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
     if (filteredData) {
       axios
         .get(
-          "http://localhost:5000/getFilteredUser",
+          "https://glp-backend.vercel.app/getFilteredUser",
           // `${
           //   filteredData
           //     ? "http://localhost:5000/getFilteredUser/"
@@ -148,7 +148,7 @@ function Main({ submitCorrectInformation, setSubmitCorrectInformation }) {
     else{
       axios
       .get(
-        "http://localhost:5000/getAllUser",
+        "https://glp-backend.vercel.app/getAllUser",
         // `${
         //   filteredData
         //     ? "http://localhost:5000/getFilteredUser/"
