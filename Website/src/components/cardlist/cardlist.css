@@ -2,7 +2,7 @@
 .cardlist {
   padding: 1.5rem 1.5rem;
   /* width: calc(100vw - var(--sidebar-width)); */
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .cardlist.active-cardlist{
